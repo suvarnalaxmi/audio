@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio Encryption</title>
+  </head>
+  <body>
+    <h1>Audio Encryption</h1>
+    <form action="/encrypt" method="POST" enctype="multipart/form-data">
+      <label for="text">Enter Text:</label>
+      <input type="text" id="text" name="text" /><br /><br />
+      <label for="audio">Upload Audio File:</label>
+      <input type="file" id="audio" name="audio" /><br /><br />
+      <input type="submit" value="Encrypt" />
+    </form>
+
+    <hr />
+
+    <h1>Audio Decryption</h1>
+    <form action="/decrypt" method="POST" enctype="multipart/form-data">
+      <label for="encrypted-audio">Upload Encrypted Audio File:</label><br />
+      <input
+        type="file"
+        id="encrypted-audio"
+        name="encrypted_audio"
+      /><br /><br />
+      <input type="submit" value="Decrypt" />
+    </form>
+  </body>
+</html>
